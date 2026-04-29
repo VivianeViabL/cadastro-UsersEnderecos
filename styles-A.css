@@ -1,0 +1,96 @@
+/* RESET básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FUNDO estilo moderno */
+body {
+    font-family: Arial, sans-serif;
+    background: url("modern-bangkok-city-at-night.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER central */
+.container {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+form p {
+    margin-bottom: 12px;
+}
+
+/* LABEL */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00b7ff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0069a7;
+    transform: scale(1.03);
+}
+
+/* LISTA */
+#listaCadastros {
+    list-style: none;
+    margin-top: 10px;
+}
+
+/* ITENS DA LISTA (cards) */
+#listaCadastros li {
+    background: #ebf9fc;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+/* SCROLL se tiver muitos cadastros */
+#listaCadastros {
+    max-height: 150px;
+    overflow-y: auto;
+}

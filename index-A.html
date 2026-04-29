@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-A.css">
+    <title>Endereços</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1>+ Adicionar novo endereço</h1>
+            <p></p>
+            <form>
+                <p><label for="nome">Nome Completo do Morador: </label>
+                <input type="text" id="nome" name="nome"></p>
+                
+                <p><label for="cep">CEP:</label>
+                <input type="number" id="cep" name="cep" required></p>
+
+                <p><label for="logadouro">Logradouro:</label>
+                <input type="text" id="logradouro" name="logradouro" required></p>
+                
+                <p><label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required></p>
+            
+                <p><label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required></p>
+                
+                <p><label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required></p>           
+            
+                <p><label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required></p>
+                
+                <p><button type="button" id="cadastrar">Cadastrar</button></p>
+                <p></p>
+                <h3>Cadastros realizados:</h3>
+                <ul id="listaCadastros"></ul>
+                <p></p>
+            </form>
+        </main>
+    </div>
+
+    <script src="script-A.js"></script>
+</body>
+</html>
