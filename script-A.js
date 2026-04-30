@@ -12,7 +12,7 @@ document.getElementById("cep").addEventListener("blur", (evento) => {
         .then(response => response.json())
         .then(data => {
             if(!data.erro){
-                document.getElementById('logradouro').value = data.logradouro;
+                document.getElementById('logradouro').value = data.logradouro; // usa o conteúdo de "ultimo.nome" OU null
                 document.getElementById('bairro').value = data.bairro;
                 document.getElementById('cidade').value = data.localidade;
                 document.getElementById('estado').value = data.uf;
@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", () => { // Executa esse código qu
     if (lista.length > 0) {
         const ultimo = lista[lista.length - 1];
 
-        document.getElementById("nome").value = dados.nome || ""; // usa o conteúdo de "dados.nome" OU null
-        document.getElementById("cep").value = dados.cep || "";
-        document.getElementById("logradouro").value = dados.logradouro || "";
-        document.getElementById("numero").value = dados.numero || "";
-        document.getElementById("bairro").value = dados.bairro || "";
-        document.getElementById("cidade").value = dados.cidade || "";
-        document.getElementById("estado").value = dados.estado || "";
+        document.getElementById("nome").value = ultimo.nome || "";
+        document.getElementById("cep").value = ultimo.cep || "";
+        document.getElementById("logradouro").value = ultimo.logradouro || "";
+        document.getElementById("numero").value = ultimo.numero || "";
+        document.getElementById("bairro").value = ultimo.bairro || "";
+        document.getElementById("cidade").value = ultimo.cidade || "";
+        document.getElementById("estado").value = ultimo.estado || "";
     }
 
     mostrarCadastros();
