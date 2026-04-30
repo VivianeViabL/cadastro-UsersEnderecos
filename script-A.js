@@ -12,7 +12,7 @@ document.getElementById("cep").addEventListener("blur", (evento) => {
         .then(response => response.json())
         .then(data => {
             if(!data.erro){
-                document.getElementById('logradouro').value = data.logradouro; // usa o conteúdo de "ultimo.nome" OU null
+                document.getElementById('logradouro').value = data.logradouro; 
                 document.getElementById('bairro').value = data.bairro;
                 document.getElementById('cidade').value = data.localidade;
                 document.getElementById('estado').value = data.uf;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => { // Executa esse código qu
     if (lista.length > 0) {
         const ultimo = lista[lista.length - 1];
 
-        document.getElementById("nome").value = ultimo.nome || "";
+        document.getElementById("nome").value = ultimo.nome || "";  // usa o conteúdo de "ultimo.nome" OU null
         document.getElementById("cep").value = ultimo.cep || "";
         document.getElementById("logradouro").value = ultimo.logradouro || "";
         document.getElementById("numero").value = ultimo.numero || "";
